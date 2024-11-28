@@ -1,0 +1,42 @@
+.ChatHistory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 500px;
+}
+
+.ChatHistory h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.ChatHistory::-webkit-scrollbar {
+    width: 10px;
+}
+
+.ChatHistory::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.ChatHistory::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+.ChatHistory::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}

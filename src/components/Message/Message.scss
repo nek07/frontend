@@ -1,0 +1,24 @@
+.Message {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.Message:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.Message:focus-within {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
