@@ -14,6 +14,7 @@ class App extends Component() {
     }
   }
   componentDidMount(){
+<<<<<<< HEAD
     connect((msg) => {
       console.log('New Message')
       this.setState(prevState => ({
@@ -30,6 +31,9 @@ class App extends Component() {
         <ChatInput send={this.send}/>
       </div>
     )
+=======
+    
+>>>>>>> 4796999397344d406e9756d0f1c7cd701b55e88a
   }
 }
 

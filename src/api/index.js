@@ -24,6 +24,10 @@ let connect = cb => {
 let sendMsg = (msg) => {
     console.log("sending msg", msg);
     socket.send(msg);
+<<<<<<< HEAD
 }
 
 export {connect, sendMsg}
+=======
+}
+>>>>>>> 4796999397344d406e9756d0f1c7cd701b55e88a
