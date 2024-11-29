@@ -6,33 +6,38 @@ import './App.css';
 import {connect, sendMsg} from './api'
 
 
-class App extends Component() {
-  contructor(props){
-    super(props);
-    this.state = {
-      ChatHistory: []
-    }
+class App extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          chatHistory: [] // Исправлено: неверное использование символа 'с' вместо 'c'
+      };
   }
-  componentDidMount(){
 
-    connect((msg) => {
-      console.log('New Message')
-      this.setState(prevState => ({
-        chatHistory: {...prevState.chatHistory, msg}
-      }))
-      console.log(this.state);
-    });
+  componentDidMount() {
+      connect((msg) => {
+          console.log('New Message:', msg);
+          this.setState(prevState => ({
+              chatHistory: [...prevState.chatHistory, msg]
+          }));
+      });
   }
-  render(){
-    return(
-      <div className='App'>
-        <Header/>
-        <ChatHistory chatHistory={this.state.chatHistory}/>
-        <ChatInput send={this.send}/>
-      </div>
-    )
 
-    
+  send = (event) => {
+      if (event.key === 'Enter') {
+          sendMsg(event.target.value);
+          event.target.value = ''; // Очистка поля ввода после отправки
+      }
+  }
+
+  render() {
+      return (
+          <div className='App'>
+              <Header />
+              <ChatHistory chatHistory={this.state.chatHistory} />
+              <ChatInput send={this.send} />
+          </div>
+      );
   }
 }
 

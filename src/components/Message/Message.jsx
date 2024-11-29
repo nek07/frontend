@@ -2,22 +2,22 @@ import React, {Component} from 'react';
 import './Message.scss'
 
 class Message extends Component {
-    constructor(props){
-        super(props);
-        let tmp = JSON.parse(this.props.message);
-        this.state = {
-            message: tmp
-        }
-    }
+    render() {
+        const { message } = this.props;
+        const parsedMessage = typeof message === 'string' ? JSON.parse(message) : message;
 
-    render(){
-        return(
-            <div className='Message'>
-                {this.state.message.body}
+        if (!parsedMessage || !parsedMessage.body) {
+            return <div className="Message">Invalid message</div>;
+        }
+
+        return (
+            <div className="Message">
+                {parsedMessage.body}
             </div>
-        )
+        );
     }
-    
 }
+
+
 
 export default Message;

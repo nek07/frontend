@@ -1,28 +1,38 @@
 .ChatInput {
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-top: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f9fafc; /* Softer background */
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
 .ChatInput input {
     width: 100%;
-    max-width: 600px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 700px; /* Increased max width for a cleaner layout */
+    padding: 12px 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 25px; /* Rounded corners */
     font-size: 16px;
     outline: none;
+    background-color: #ffffff;
+    transition: all 0.3s ease; /* Smooth transitions for interactions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle input shadow */
 }
 
 .ChatInput input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #4CAF50; /* Green for focus */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Green glow effect */
 }
 
 .ChatInput input::placeholder {
-    color: #aaa;
+    color: #bbbbbb;
     font-style: italic;
+    transition: color 0.3s ease; /* Smooth placeholder color transition */
+}
+
+.ChatInput input:focus::placeholder {
+    color: #999999; /* Dim the placeholder on focus */
 }
